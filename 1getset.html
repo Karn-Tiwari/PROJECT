@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .card {
+            width: 300px;
+            margin: 15px;
+            border: 1px solid black;
+            height: 10rem;
+            width: 10rem;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 justify-content-center align-item-center">
+                <div class="card" data-color="blue"></div>
+                <div class="card" data-color="red"></div>
+                <div class="card" data-color="green"></div>
+                <div class="card" data-color="yellow"></div>
+                <div class="card" data-color="purple"></div>
+                <div class="card" data-color="orange"></div>
+                <div class="card" data-color="brown"></div>
+                <div class="card" data-color="black"></div>
+                <div class="card" data-color="white"></div>
+            </div>
+        </div>
+    </div>
+    <div class="card" data-color="blue"></div>
+    <div class="card" data-color="red"></div>
+    <div class="card" data-color="green"></div>
+    <div class="card" data-color="yellow"></div>
+    <div class="card" data-color="purple"></div>
+    <div class="card" data-color="orange"></div>
+    <div class="card" data-color="brown"></div>
+    <div class="card" data-color="black"></div>
+    <div class="card" data-color="white"></div>
+    <script>
+        //Q Write a script which fetches th data-color attribute of the card on double clicking on them and attaches the fetched class to the card.Also changes the data-color attribute to "used"
+        let allcards = document.querySelectorAll(".card");
+        allcards.forEach((card) => {
+            allcard.addEventListener('dblclick', (e) => {
+                let datacolor = card.getAttribute("data-color");
+                card.classList.add(datacolor);
+                card.setAttribute("data-color", "used");
+
+            })
+        })
+    </script>
+
+
+</body>
+
+</html>

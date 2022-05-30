@@ -1,0 +1,113 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Events in depth</title>
+    <style>
+        .orange{
+            width:20rem;
+            height:20rem;
+            margin-top:0px;
+            display: flex;
+            border:2px solid black;
+            background-color: orange;
+        }
+        .blue{
+            width:10rem;
+            height:10rem;
+            margin-top:0px;
+            margin-top:10rem;
+            display: flex;
+            border:2px solid black;
+            background-color: blue;
+        }
+        .yellow{
+            width:5rem;
+            height:5rem;
+            margin-top:0px;
+            display: flex;
+            border:2px solid black;
+            background-color: yellowgreen;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="orange">
+        <div class="blue">
+            <div class="yellow">
+
+            </div>
+        </div>
+    </div>
+    <script>
+        let orange = document.querySelector(".orange");
+        let blue = document.querySelector(".blue");
+        let yellow = document.querySelector(".yellow");
+        orange.addEventListener("click",(e)=>{
+            // alert("Orange");
+            // console.log(e.eventPhase);
+            console.log(e.target,e.currentTarget);
+        });
+        blue.addEventListener("click",(e)=>{
+            // alert("Blue 1");
+            // e.stopImmidiatePropagation();
+            // console.log(e.eventPhase);
+        });
+        blue.addEventListener("click",(e)=>{
+            alert("Blue 2");
+        });
+        yellow.addEventListener("click",(e)=>{
+            alert("Yellow");
+        });
+    </script>
+</body>
+</html>
+
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Applying browser events concepts</title>
+     <style>
+         .pink{
+                width:20rem;
+                height:20rem;
+                margin-top:0px;
+                display: flex;
+                border:2px solid black;
+                background-color: pink;
+         }
+         .blue{
+                width:10rem;
+                height:10rem;
+                margin-top:0px;
+                margin-top:10rem;
+                display: flex;
+                border:2px solid black;
+                background-color: blue;
+         }
+     </style>
+ </head>
+ <body>
+     <div class="pink">
+         <div class="blue">
+
+         </div>
+     </div>
+     <script>
+         //Question-: The following code is broken.Even when clicked on blue, its alerted that pink is clicked.Fix it.
+         let pink = document.querySelector(".pink");
+         pink.addEventListener("click",(e)=>{
+             if(e.target===e.currentTarget)
+             alert("Pink was clicked");
+         });
+
+     </script>
+ </body>
+ </html>

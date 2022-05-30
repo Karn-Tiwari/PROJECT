@@ -4,30 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> DOM (Method and Properties)</title>
-    <style>
-        .cell{
-            border: 1px solid;
-            margin:auto;
-            margin-top:10rem;
-            height:20rem;
-            width:20rem;
-            display: flex;
-        }
-    </style>
+    <title>DOM method and properties</title>
 </head>
+<style>
+    .cell{
+        width:20rem;
+        height:20rem;
+        margin:auto;
+        margin-top:10rem;
+        display: flex;
+        border:2px solid black;
+    }
+</style>
 <body>
     <div class="cell">
 
     </div>
     <script>
-        //Jail the Mouse
-        // Question- You are given an empty cell.Write a script that whenever the mouse enters the cell jail should be drawn over it and it should be removed once it leaves
-        let cell = document.querySelector(".cell");
-        cell.addEventListener("mouseenter",(e)=>{
-           cell.style.backgroundImage = "url('jail.jpg')";
+        //Jail the mouse
+        // Question You are given an empty cell.Write a script that whenever the mouse enters the cell jail should be drawn over it and it shoulf be removed once it leaves
+        let cell = document.querySelector('.cell');
+        cell.addEventListener('mouseenter',(e)=>{
+            cell.style.backgroundImage = "url('jail.png')";
         });
-        cell.addEventListener("mouseleave",(e)=>{
+        cell.addEventListener('mouseleave',(e)=>{
             cell.style.backgroundImage = "none";
         });
     </script>

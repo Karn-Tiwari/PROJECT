@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siblings</title>
+    <style>
+        .card {
+            box-sizing: border-box;
+            height: 10rem;
+            width: 10rem;
+            border: 2px solid black;
+            margin: 1rem;
+            background-color: #f0f0f0;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card red"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+
+    </div>
+    <script>
+        // Question Create a generic funtion to select all siblings of a given node. Using that function delete all siblings of red card
+
+
+        let redElemNode = document.querySelector(".red");
+        letallCards = document.querySelectorAll(".card");
+        allCards.forEach(card => {
+            if(card!==redElemNode){
+                card.remove();
+            }
+        });
+        // deleteAllSiblings(redElemNode);
+
+        // function deleeAllSiblings(redElem) {
+        //     let before = redElem.previousElementSiblings;
+        //     let after = redElem.afterElementSiblings;
+
+
+        //     while (before) {
+        //         before.remove();
+        //         before = before.previousElementSibling;
+        //     }
+        //     while (after) {
+        //         after.remove();
+        //         after = after.nextElementSibling;
+        //     }
+        // }
+    </script>
+</body>
+
+</html>
